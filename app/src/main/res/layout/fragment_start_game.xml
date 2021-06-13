@@ -22,16 +22,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Starta spel"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_start_game_button_number_of_players"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_start_game_spinner_number_of_players"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/fragment_start_game_text_view_name" />
 
-    <Button
-        android:id="@+id/fragment_start_game_button_number_of_players"
+    <TextView
+        android:id="@+id/fragment_start_game_text_view_number_of_players"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Antal spelare"
+        android:textSize="24dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_start_game_spinner_number_of_players"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+    <Spinner
+        android:id="@+id/fragment_start_game_spinner_number_of_players"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Antal spelare"
+        android:entries="@array/numberOfPlayers"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/fragment_start_game_button_number_of_rounds"
@@ -45,6 +56,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_start_game_button_number_of_players" />
+        app:layout_constraintTop_toBottomOf="@+id/fragment_start_game_spinner_number_of_players" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
