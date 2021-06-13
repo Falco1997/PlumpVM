@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/StartGame"
+        android:title="Spela"
+        android:icon="@mipmap/ic_launcher">
+
+    </item>
+
+    <item
+        android:id="@+id/HighScore"
+        android:title="Highscore"
+        android:icon="@mipmap/ic_launcher">
+
+    </item>
+
+    <item
+        android:id="@+id/Settings"
+        android:title="Inställningar"
+        android:icon="@mipmap/ic_launcher">
+
+    </item>
+
+</menu>
