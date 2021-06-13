@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PlumpVM">
-        <activity android:name=".fragments.HighScore"></activity>
+        <activity android:name=".activities.GameActivity" android:screenOrientation="landscape"></activity>
+        <activity android:name=".fragments.HighScore" />
         <activity android:name=".fragments.StartGame" />
         <activity android:name=".activities.MainActivity">
             <intent-filter>
