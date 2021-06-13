@@ -6,12 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.plumpvm.R
+import com.example.plumpvm.databinding.FragmentStartGameBinding
 
 class StartGameFragment : Fragment() {
 
     companion object {
 
     }
+
+    lateinit var binding: FragmentStartGameBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,10 +23,14 @@ class StartGameFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_start_game, container, false)
+    ) = FragmentStartGameBinding.inflate(inflater, container, false).run {
+        binding = this
+        root
     }
+
+
+
 }
