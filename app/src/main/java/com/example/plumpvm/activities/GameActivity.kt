@@ -27,6 +27,6 @@ class GameActivity : AppCompatActivity() {
 
         binding.test1.text = numberOfPlayers
         binding.test2.text = numberOfRounds
-
+        
     }
 }
