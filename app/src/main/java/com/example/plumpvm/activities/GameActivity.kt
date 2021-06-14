@@ -13,20 +13,24 @@ class GameActivity : AppCompatActivity() {
         private const val NUMBER_OF_ROUNDS = "NUMBER_OF_ROUNDS"
     }
 
+    lateinit var binding: ActivityGameBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_game)
+        binding = ActivityGameBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val binding = ActivityGameBinding.inflate(layoutInflater)
+        val numberOfPlayers = intent.getStringExtra(NUMBER_OF_PLAYERS).toString()
+        val numberOfRounds = intent.getStringExtra(NUMBER_OF_ROUNDS).toString()
 
-        val numberOfPlayers = intent.getStringExtra(NUMBER_OF_PLAYERS)
-        val numberOfRounds = intent.getStringExtra(NUMBER_OF_ROUNDS)
-
-        Log.d("plumpDebug", "GameActivity Players: " + numberOfPlayers.toString())
-        Log.d("plumpDebug", "GameActivity Rounds: " + numberOfRounds.toString())
+        Log.d("plumpDebug", "GameActivity Players: " + numberOfPlayers)
+        Log.d("plumpDebug", "GameActivity Rounds: " + numberOfRounds)
 
         binding.test1.text = numberOfPlayers
         binding.test2.text = numberOfRounds
+
+        Log.d("plumpDebug", binding.test1.text as String)
+        Log.d("plumpDebug", binding.test2.text as String)
         
     }
 }
