@@ -31,8 +31,8 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.main_activity_frame_layout, StartGameFragment(), KEY_FRAGMENT_START_GAME)
-                .add(R.id.main_activity_frame_layout, HighScoreFragment(), KEY_FRAGMENT_HIGHSCORE)
                 .add(R.id.main_activity_frame_layout, SettingsFragment(), KEY_FRAGMENT_SETTINGS)
+                    .add(R.id.main_activity_frame_layout, HighScoreFragment(), KEY_FRAGMENT_HIGHSCORE)
                 .commitNow()
             supportFragmentManager
                 .beginTransaction()
@@ -44,8 +44,8 @@ class MainActivity : AppCompatActivity() {
         binding.mainActivityBottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.StartGame -> changeFragment(KEY_FRAGMENT_START_GAME)
-                R.id.HighScore -> changeFragment(KEY_FRAGMENT_HIGHSCORE)
                 R.id.Settings -> changeFragment(KEY_FRAGMENT_SETTINGS)
+                R.id.HighScore -> changeFragment(KEY_FRAGMENT_HIGHSCORE)
             }
             true
         }

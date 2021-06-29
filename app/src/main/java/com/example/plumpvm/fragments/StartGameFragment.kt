@@ -13,11 +13,16 @@ import com.example.plumpvm.databinding.FragmentStartGameBinding
 class StartGameFragment : Fragment() {
 
     companion object {
-        private const val NUMBER_OF_PLAYERS = "NUMBER_OF_PLAYERS"
+        private const val LIST_OF_PLAYERS = "LIST_OF_PLAYERS"
         private const val NUMBER_OF_ROUNDS = "NUMBER_OF_ROUNDS"
     }
 
     lateinit var binding: FragmentStartGameBinding
+
+    private val numberOfRounds14 = arrayListOf(10, 9, 8, 7, 6, 5, 4, 4, 5, 6, 7, 8, 9, 10)
+    private val numberOfRounds7 = arrayListOf(10, 9, 8, 7, 6, 5, 4)
+
+    private var listOfPlayers = arrayListOf("Bosse", "Janne", "Göran", "Jalle", "Kalle")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,10 +44,11 @@ class StartGameFragment : Fragment() {
 
         binding.fragmentStartGameButtonStartGame.setOnClickListener {
             val startGameIntent = Intent(context, GameActivity::class.java).apply {
-                Log.d("plumpDebug", binding.fragmentStartGameSpinnerNumberOfPlayers.selectedItem.toString())
-                Log.d("plumpDebug", binding.fragmentStartGameSpinnerNumberOfRounds.selectedItem.toString())
-                putExtra(NUMBER_OF_PLAYERS, binding.fragmentStartGameSpinnerNumberOfPlayers.selectedItem.toString())
-                putExtra(NUMBER_OF_ROUNDS, binding.fragmentStartGameSpinnerNumberOfRounds.selectedItem.toString())
+                when (binding.fragmentStartGameSpinnerNumberOfRounds.selectedItem.toString()) {
+                    "14" -> putIntegerArrayListExtra(NUMBER_OF_ROUNDS, numberOfRounds14)
+                    "7" -> putIntegerArrayListExtra(NUMBER_OF_ROUNDS, numberOfRounds7)
+                }
+                putStringArrayListExtra(LIST_OF_PLAYERS, listOfPlayers)
             }
             startActivity(startGameIntent)
         }

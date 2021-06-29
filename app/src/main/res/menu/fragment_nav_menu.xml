@@ -5,21 +5,18 @@
         android:id="@+id/StartGame"
         android:title="Spela"
         android:icon="@mipmap/ic_launcher">
-
-    </item>
-
-    <item
-        android:id="@+id/HighScore"
-        android:title="Highscore"
-        android:icon="@mipmap/ic_launcher">
-
     </item>
 
     <item
         android:id="@+id/Settings"
         android:title="Inställningar"
         android:icon="@mipmap/ic_launcher">
+    </item>
 
+    <item
+        android:id="@+id/HighScore"
+        android:title="Highscore"
+        android:icon="@mipmap/ic_launcher">
     </item>
 
 </menu>

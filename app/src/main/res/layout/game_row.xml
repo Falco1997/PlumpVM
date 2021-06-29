@@ -1,62 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:id="@+id/row_number_constraint_layout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent">
+        android:paddingLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/player1_score_box"
+        app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
-            android:id="@+id/row_number11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Row"
-            android:textSize="30dp"
-            android:paddingRight="8dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
             android:id="@+id/row_number"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="1"
-            app:layout_constraintLeft_toRightOf="@+id/row_number11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="10"
+            android:textSize="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="1"
-            app:layout_constraintLeft_toRightOf="@+id/row_number"
-            app:layout_constraintTop_toTopOf="parent" />
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="1"
-            app:layout_constraintLeft_toRightOf="@+id/row_number"
-            app:layout_constraintTop_toTopOf="parent" />
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="1"
-            app:layout_constraintLeft_toRightOf="@+id/row_number"
-            app:layout_constraintTop_toTopOf="parent" />
-        <Button
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="1"
-            app:layout_constraintLeft_toRightOf="@+id/row_number"
-            app:layout_constraintTop_toTopOf="parent" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/player1_score_box"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="30dp"
+        app:layout_constraintLeft_toRightOf="@+id/row_number_constraint_layout"
+        app:layout_constraintRight_toLeftOf="@id/player1_score_box"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/player2_score_box"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="2"
+        android:textSize="30dp"
+        app:layout_constraintLeft_toRightOf="@+id/player1_score_box"
+        app:layout_constraintRight_toLeftOf="@id/player3_score_box"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/player3_score_box"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textSize="30dp"
+        app:layout_constraintLeft_toRightOf="@+id/player2_score_box"
+        app:layout_constraintRight_toLeftOf="@id/player4_score_box"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/player4_score_box"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="4"
+        android:textSize="30dp"
+        app:layout_constraintLeft_toRightOf="@+id/player3_score_box"
+        app:layout_constraintRight_toLeftOf="@id/player5_score_box"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/player5_score_box"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="5"
+        android:textSize="30dp"
+        app:layout_constraintLeft_toRightOf="@+id/player4_score_box"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#D3D3D3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
