@@ -22,7 +22,7 @@ class StartGameFragment : Fragment() {
     private val numberOfRounds14 = arrayListOf(10, 9, 8, 7, 6, 5, 4, 4, 5, 6, 7, 8, 9, 10)
     private val numberOfRounds7 = arrayListOf(10, 9, 8, 7, 6, 5, 4)
 
-    private var listOfPlayers = arrayListOf("Bosse", "Janne", "Göran", "Jalle", "Kalle")
+    private var listOfPlayers = arrayListOf("Bos", "Jan", "Gör", "Jal", "Kal")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
