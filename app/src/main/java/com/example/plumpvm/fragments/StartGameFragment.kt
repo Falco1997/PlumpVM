@@ -49,6 +49,12 @@ class StartGameFragment : Fragment() {
                     "7" -> putIntegerArrayListExtra(NUMBER_OF_ROUNDS, numberOfRounds7)
                 }
                 putStringArrayListExtra(LIST_OF_PLAYERS, listOfPlayers)
+
+                when (binding.fragmentStartGameSpinnerPlayers.selectedItem.toString()) {
+                    "4" -> putStringArrayListExtra(LIST_OF_PLAYERS, listOfPlayers)
+                    "5" -> putStringArrayListExtra(LIST_OF_PLAYERS, listOfPlayers)
+                    "6" -> putStringArrayListExtra(LIST_OF_PLAYERS, listOfPlayers)
+                }
             }
             startActivity(startGameIntent)
         }
